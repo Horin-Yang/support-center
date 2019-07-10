@@ -9,7 +9,7 @@
         </div>
 
         <section class="list">
-            <article v-for="question of questions">
+            <article v-for="question of questions" :key="question.title">
                 <h2 v-html="question.title"></h2>
                 <p v-html="question.content"></p>
             </article>
@@ -30,13 +30,9 @@ export default {
     async created () {
         this.loading =true
         try {
-            const response = await fetch('http://localhost:3000/questions')
-            if (response.ok) {
-                this.questions = await response.json()
-            } else {
-                throw new Error('error')
-            }
-        } catch(e) {
+            this.questions = await this.$fetch('questions')
+        }
+        catch(e) {
             this.error = e
         }
         this.loading = false
