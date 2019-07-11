@@ -1,16 +1,16 @@
 <template>
-    <nav class="menu">
-        <!-- 此处是链接 -->
-        <router-link :to="{ name: 'home'}" exact>Home</router-link>
-        <router-link :to="{ name: 'faq'}">FAQ</router-link>
-    </nav>
+  <nav class="menu">
+    <!-- 此处是链接 -->
+    <router-link :to="{ name: 'home'}" exact>Home</router-link>
+    <router-link :to="{ name: 'faq'}">FAQ</router-link>
+  </nav>
 </template>
 
 
 <style lang="stylus" scoped>
-    @import '../style/imports';
+  @import '../style/imports';
 
-    .router-link-active {
-        border-bottom-color: $primary-color;
-    }
+  .router-link-active {
+    border-bottom-color: $primary-color;
+  }
 </style>

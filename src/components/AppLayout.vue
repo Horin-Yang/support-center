@@ -1,25 +1,25 @@
 <template>
-    <div class="app-layout">
-        <header class="header">
-            <div><img class="img" src="../assets/logo.svg" /></div>
-            <div>My shirt shop</div>
-        </header>
+  <div class="app-layout">
+    <header class="header">
+      <div><img class="img" src="../assets/logo.svg" /></div>
+      <div>My shirt shop</div>
+    </header>
 
-        <!-- 导航菜单 -->
-        <NavMenu />
+    <!-- 导航菜单 -->
+    <NavMenu />
 
-        <!-- 菜单放在这 -->
-        <router-view />
-    </div>
+    <!-- 菜单放在这 -->
+    <router-view />
+  </div>
 </template>
 
 <script>
 import NavMenu from './NavMenu.vue'
 
 export default {
-    components: {
-        NavMenu,
-    }
+  components: {
+    NavMenu,
+  }
 }
 </script>
 
@@ -29,9 +29,9 @@ export default {
 
 <style lang="stylus" scoped>
 .header {
-    .img {
-        width: 64px;
-        height: 64px;
-    }
+  .img {
+    width: 64px;
+    height: 64px;
+  }
 }
 </style>

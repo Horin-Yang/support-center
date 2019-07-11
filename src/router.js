@@ -7,14 +7,14 @@ import FAQ from './components/FAQ.vue'
 Vue.use(VueRouter)
 
 const routes = [
-    // 路由放这里
-    {path: '/', name: 'home', component: Home},
-    {path: '/faq', name: 'faq', component: FAQ},
+  // 路由放这里
+  {path: '/', name: 'home', component: Home},
+  {path: '/faq', name: 'faq', component: FAQ},
 ]
 
 const router = new VueRouter({
-    routes,
-    mode: 'history',
+  routes,
+  mode: 'history',
 })
 
 export default router
