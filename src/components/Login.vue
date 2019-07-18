@@ -104,11 +104,28 @@ export default {
       await this[this.mode] ()
     },
     async login() {
-      // todo
+      this.$state.user = await this.$fetch('login', {
+        method: 'POST',
+        body: JSON.stringify({
+          username: this.username,
+          password: this.password,
+        }),
+      })
+      // this.$router.push({name: 'home'})
+      this.$router.replace(this.$route.params.wantedRoute || { name: 'home' })
     },
     async signup() {
-      // TODO
-    }
+      await this.$fetch('signup', {
+        method: 'POST',
+        body: JSON.stringify({
+          username: this.username,
+          password: this.password,
+          email:this.email,
+        }),
+      })
+      this.mode = 'login'
+      console.log(this.mode);
+    },
   },
 }
 </script>

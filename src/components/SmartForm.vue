@@ -1,7 +1,7 @@
 <template>
   <form @submit.prevent="submit">
     <section class="content">
-      <h2>{{ titlt }}</h2>
+      <h2>{{ title }}</h2>
       <!-- Main content -->
       <slot />
       <div class="actions">
@@ -28,7 +28,7 @@ export default {
     },
     operation: {
       type: String,
-      required:true,
+      required: true,
     },
     valid: {
       type: Boolean,
