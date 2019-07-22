@@ -1,6 +1,7 @@
 <template>
   <div class="row">
-    <input
+    <component
+      :is="element"
       class="input"
       :class="inputClass"
       :name="name"
@@ -8,7 +9,7 @@
       :value="text"
       :placeholder="placeholder"
       @input="update"
-    />
+      v-bind="$attrs" />
   </div>
 </template>
 
@@ -40,7 +41,11 @@ export default {
       return {
         'invalid': this.invalid,
       }
-    }
+    },
+
+    element () {
+      return this.type === 'textarea' ? this.type : 'input'
+    },
   },
 
   methods: {
