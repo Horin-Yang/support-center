@@ -9,7 +9,9 @@
     <NavMenu />
 
     <!-- 菜单放在这 -->
-    <router-view />
+    <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>
   </div>
 </template>
 

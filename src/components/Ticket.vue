@@ -39,6 +39,13 @@ export default {
     }),
   ],
 
+  // 使用计算属性会使组件与路由耦合，难以复用
+  // computed: {
+  //   id () {
+  //     return $route.params.id
+  //   },
+  // },
+
   props: {
     id: {
       type: String,
